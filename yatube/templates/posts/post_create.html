@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}
+  {% if is_edit %}
+    Редактировать пост
+  {% else %}
+    Новый пост
+  {% endif %} 
+{% endblock %}
+{% block content %}   
+{% include 'includes/start_notion.html' %}
+<div class="card-header">       
+  {% if is_edit %}
+    Редактировать пост
+  {% else %}
+    Новый пост
+  {% endif %}             
+</div>
+{% include 'includes/form.html' %}
+  <div class="d-flex justify-content-end">
+    <button type="submit" class="btn btn-primary">
+      {% if is_edit %}
+        Сохранить
+      {% else %}
+        Добавить
+      {% endif %} 
+    </button>
+  </div>
+</form>
+{% include 'includes/end_notion.html' %}
+{% endblock %}

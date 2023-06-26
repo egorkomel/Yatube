@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}
+  Зарегистрироваться
+{% endblock %}
+{% block content %}
+{% include 'includes/start_notion.html' %}
+  <div class="card-header">
+    Зарегистрироваться
+  </div>
+{% include 'includes/form.html' %}
+  <div class="col-md-6 offset-md-4">
+    <button type="submit" class="btn btn-primary">
+      Зарегистрироваться
+    </button>
+  </div>
+</form>
+{% include 'includes/end_notion.html' %}
+{% endblock %} 
